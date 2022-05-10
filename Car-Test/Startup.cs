@@ -12,19 +12,19 @@ namespace Car_Test
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.  
+       
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
 
-            var sqlConnectionString = "Host=localhost;Username=postgres;Password=admin123;Database=patients;SSLMode=Prefer";
+            var sqlConnectionString = "Host=localhost;Username=postgres;Password=admin123;Database=cars;SSLMode=Prefer";
 
             services.AddDbContext<PostgreSqlContext>(options => options.UseNpgsql(sqlConnectionString));
 
             services.AddScoped<IDataAccessProvider, DataAccessProvider>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.  
+       
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
