@@ -16,16 +16,7 @@ references Car(id)
 );
  
 Insert into Car (id,registration_number,brand,model)
-values ('1','SGL61571','Porshe','Panamera')
+values ('1','SGL61571','Porshe','Panamera');
  
  Insert into technical_examination (id_car,id,affected_date,next_examination_date,is_checked)
- values ('1','1','2022-05-01','2023-05-01',1)
-
-select * 
-from Car
-
-select * 
-from technical_examination
-
-Drop table technical_examination 
-Drop table Car 
+ values ('1','1','2022-05-01','2023-05-01',1);
